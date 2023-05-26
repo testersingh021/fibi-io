@@ -1,6 +1,6 @@
 {
   "hosting": {
-    "site": "fibi-io",
+    "site": "fuber-taxi",
     "public": "build/web",
     "ignore": [
       "firebase.json",
