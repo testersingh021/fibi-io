@@ -26,8 +26,7 @@ Widget mainDrawer(BuildContext context, {bool isLoggedIn = true}) => Drawer(
                   SizedBox(
                     height: 100,
                     child: Expanded(
-                        child:
-                            Lottie.asset('assets/lottie/taxi-animation.json')),
+                        child: Lottie.asset('assets/lottie/taxi-driver.json')),
                   ),
                   Text(
                     "Fuber Taxi",

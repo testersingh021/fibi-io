@@ -29,15 +29,15 @@ class AssetLoaderProvider with ChangeNotifier {
     //TODO: a temporary hack, device pixel ratio does not work on some devices. to be fixed later
     final img_platform = !kIsWeb && Platform.isAndroid ? "l" : "s";
     _markerIconFrom = await BitmapDescriptor.fromAssetImage(
-        ImageConfiguration(devicePixelRatio: 1),
+        const ImageConfiguration(devicePixelRatio: 1),
         'assets/markers/from_$img_platform.png',
         mipmaps: false);
     _markerIconTo = await BitmapDescriptor.fromAssetImage(
-        ImageConfiguration(devicePixelRatio: 1),
+        const ImageConfiguration(devicePixelRatio: 1),
         'assets/markers/to_$img_platform.png');
     _markerIconTaxi = await BitmapDescriptor.fromAssetImage(
-        ImageConfiguration(devicePixelRatio: 1),
-        'assets/markers/taxi_$img_platform.png');
+        const ImageConfiguration(devicePixelRatio: 1),
+        'assets/markers/car.png');
 
     notifyListeners();
   }
