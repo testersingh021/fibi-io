@@ -50,10 +50,9 @@ jobs:
         working-directory: ./
       # Deploy Firebase Hosting
       - name: Deploy Firebase Hosting
-        uses: w9jds/firebase-action@master
+        uses: FirebaseExtended/action-hosting-deploy@v0
         with:
-#          args: firebase deploy --only hosting:fibi-io
-          args: firebase deploy --token "$FIREBASE_TOKEN"
+          args: firebase deploy --only hosting:fibi-io
 
         env:
           FIREBASE_TOKEN: ${{ secrets.FIREBASE_TOKEN }}
