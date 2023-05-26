@@ -48,7 +48,6 @@ jobs:
           flutter pub get
           flutter build web
         working-directory: ./
-
       # Deploy Firebase Hosting
       - name: Deploy Firebase Hosting
         uses: w9jds/firebase-action@master
