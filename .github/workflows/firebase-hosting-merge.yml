@@ -51,9 +51,9 @@ jobs:
 
       # Deploy Firebase Hosting
       - name: Deploy Firebase Hosting
-      - uses: FirebaseExtended/action-hosting-deploy@v0
+        uses: w9jds/firebase-action@master
         with:
-          repoToken: '${{ secrets.GITHUB_TOKEN }}'
-          firebaseServiceAccount: '${{ secrets.FIREBASE_SERVICE_ACCOUNT_FIBI_IO }}'
-          channelId: live
-          projectId: fibi-io
+          args: deploy --only hosting:fibi-io
+        env:
+          FIREBASE_TOKEN: ${{ secrets.FIREBASE_TOKEN }}
+          PROJECT_PATH: ./
