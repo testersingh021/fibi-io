@@ -1,4 +1,4 @@
-# Flutterbase taxi
+# Fuber taxi
 
 A large variety of apps depend on map services. The purpose of this project was to test Google Map Services in connection with Flutter on Android, iOS and Web platforms. Here is what I got:
 
@@ -6,7 +6,7 @@ A large variety of apps depend on map services. The purpose of this project was 
 ![App Demo Images](https://github.com/YakivGalkin/flutterbase-taxi/raw/main/docs/taxi_demo_image.png)
 
 
-### [Click to open Online Web Demo](https://taxi.flutterbase.com)
+### [Click to open Online Web Demo](https://fuber-taxi.firebaseapp.com/#/)
 
 ## Real life taxi app
 
@@ -14,11 +14,11 @@ The Real taxi app requires development of a scalable server/cloud side storage a
 
 ## Installation instruction
 
-Clone the flutterbase taxi application source code repository:
+Clone the fuber taxi application source code repository:
 
 ```
-git clone https://github.com/YakivGalkin/flutterbase-taxi
-cd flutterbase-taxi
+git clone https://github.com/singhtester021/fibi-io
+cd fibi-io
 ```
 
 Install Flutter dependencies
@@ -36,7 +36,7 @@ Create Google Cloud API key with the following APIs enabled:
 * Directions API
 * Geocoding API
 
-Replace the __FLUTTERBASETAXI_API_KEY__ text placeholder with your Google API key in the following files: 
+Replace the __FUBERTAXI_API_KEY__ text placeholder with your Google API key in the following files: 
 * lib/api/google_api.dart
 * web/index.html
 
@@ -45,7 +45,7 @@ Google Places APIs and Directions API cannot be used in browsers due to the CORS
 
 ### Android & iOS
 
-Replace the __FLUTTERBASETAXI_API_KEY__ text placeholder with your Google API key in the /ios/* and /android/* project folders, make sure the following APIs are enabled:
+Replace the __FUBERTAXI_API_KEY__ text placeholder with your Google API key in the /ios/* and /android/* project folders, make sure the following APIs are enabled:
 
 
 * Maps SDK for Android
@@ -62,7 +62,7 @@ The reason I love Flutter is the beauty of its reactive UI nature. Once you've d
 The recommended way of keeping application state in Flutter is the Provider Pattern. Once the key application screens were defined in Figma, the reactive app state structure became obvious.
 
 
-![Application Provider's overview](https://github.com/YakivGalkin/flutterbase-taxi/raw/main/docs/providers_overview.png)
+![Application Provider's overview](https://github.com/singhtester021/flutterbase-taxi/raw/main/docs/providers_overview.png)
 
 After the state design was finalized, I had most pleasant time coding in Dart language :)
 
@@ -111,7 +111,7 @@ I would like to thank the entire Flutter team and its community for building suc
 
 ## Get in thought
 
-Calling all Flutter enthusiasts - connect me on [LinkedIn](https://www.linkedin.com/in/yakiv/) :)
+Calling all Flutter enthusiasts - connect me on [LinkedIn](https://www.linkedin.com/in/singhtestert021/) :)
 
 
 

@@ -1,15 +1,14 @@
-// Project: Flutter-base Taxi
+// Project: Fuber Taxi
 // Purpose: Testing integration of Flutter & Google Maps
 // Platforms:  Web, iOS and Android
-// Authors: www.flutterbase.com
+// Authors: www.fuber.com
 
 import 'package:flutter/material.dart';
 import 'package:flutterbasetaxi/providers/active_trip.dart';
 import 'package:flutterbasetaxi/providers/location.dart';
 import 'package:flutterbasetaxi/providers/theme.dart';
-import 'package:flutterbasetaxi/ui/common.dart';
-import 'package:provider/provider.dart';
 import 'package:lottie/lottie.dart';
+import 'package:provider/provider.dart';
 
 Widget mainDrawer(BuildContext context, {bool isLoggedIn = true}) => Drawer(
       child: ListView(
@@ -31,7 +30,7 @@ Widget mainDrawer(BuildContext context, {bool isLoggedIn = true}) => Drawer(
                             Lottie.asset('assets/lottie/taxi-animation.json')),
                   ),
                   Text(
-                    "Flutterbase Taxi",
+                    "Fuber Taxi",
                     style: Theme.of(context)
                         .textTheme
                         .headline6
@@ -71,28 +70,28 @@ Widget mainDrawer(BuildContext context, {bool isLoggedIn = true}) => Drawer(
             height: 10,
             thickness: 1,
           ),
-          ListTile(
-            title: const Text('Connect with Developer'),
-            subtitle: Text(
-              'www.linkedin.com/in/yakiv/',
-              overflow: TextOverflow.ellipsis,
-            ),
-            onTap: () {
-              launchUrl('https://www.linkedin.com/in/yakiv/');
-              Navigator.pop(context);
-            },
-          ),
-          ListTile(
-            title: const Text('Get Full Source Code'),
-            subtitle: Text(
-              'github.com/YakivGalkin/flutterbase-taxi',
-              overflow: TextOverflow.ellipsis,
-            ),
-            onTap: () {
-              launchUrl('https://github.com/YakivGalkin/flutterbase-taxi');
-              Navigator.pop(context);
-            },
-          ),
+          // ListTile(
+          //   title: const Text('Connect with Developer'),
+          //   subtitle: Text(
+          //     'www.linkedin.com/in/yakiv/',
+          //     overflow: TextOverflow.ellipsis,
+          //   ),
+          //   onTap: () {
+          //     launchUrl('https://www.linkedin.com/in/yakiv/');
+          //     Navigator.pop(context);
+          //   },
+          // ),
+          // ListTile(
+          //   title: const Text('Get Full Source Code'),
+          //   subtitle: Text(
+          //     'github.com/YakivGalkin/flutterbase-taxi',
+          //     overflow: TextOverflow.ellipsis,
+          //   ),
+          //   onTap: () {
+          //     launchUrl('https://github.com/YakivGalkin/flutterbase-taxi');
+          //     Navigator.pop(context);
+          //   },
+          // ),
         ],
       ),
     );
