@@ -4,15 +4,15 @@
 // Authors: www.flutterbase.com
 
 import 'package:flutter/material.dart';
-import 'package:flutterbasetaxi/types/trip.dart';
-import 'package:flutterbasetaxi/ui/active_trip_scaffold.dart';
+import 'package:flutterbasetaxi/providers/active_trip.dart';
 import 'package:flutterbasetaxi/providers/assets_loader.dart';
 import 'package:flutterbasetaxi/providers/location.dart';
-import 'package:flutterbasetaxi/ui/new_trip_scaffold.dart';
-import 'package:flutterbasetaxi/ui/common.dart';
-import 'package:flutterbasetaxi/providers/active_trip.dart';
-import 'package:flutterbasetaxi/ui/select_location_scaffold.dart';
 import 'package:flutterbasetaxi/providers/theme.dart';
+import 'package:flutterbasetaxi/types/trip.dart';
+import 'package:flutterbasetaxi/ui/active_trip_scaffold.dart';
+import 'package:flutterbasetaxi/ui/common.dart';
+import 'package:flutterbasetaxi/ui/new_trip_scaffold.dart';
+import 'package:flutterbasetaxi/ui/select_location_scaffold.dart';
 import 'package:flutterbasetaxi/ui/trip_finished_scaffold.dart';
 import 'package:provider/provider.dart';
 import 'package:touch_indicator/touch_indicator.dart';
@@ -44,9 +44,9 @@ void main() => runApp(MultiProvider(
                   final currentTrip = TripProvider.of(context);
 
                   // if Current location is not known
-                  if (!locProvider.isDemoLocationFixed)
-                    // show Location Selection screen
+                  if (!locProvider.isDemoLocationFixed) {
                     return LocationScaffold();
+                  }
 
                   // else if there is an Active Trip
                   if (currentTrip.isActive) {
@@ -55,7 +55,7 @@ void main() => runApp(MultiProvider(
                         // show Rate the Trip screen
                         ? tripFinishedScaffold(context)
                         // if not finished - show the trip in progress screen
-                        : ActiveTrip();
+                        : const ActiveTrip();
                   }
 
                   // else if there is no active trip - display UI for new trip creation
